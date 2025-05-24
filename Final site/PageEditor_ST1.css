@@ -1,0 +1,332 @@
+@font-face {
+				font-family: 'Spartan';
+				src: url('../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+			}
+
+body {
+			font-family: 'Spartan';
+			background-color: #14131e;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+		}
+header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 15px 50px;
+			background: #617333;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		}
+		/* Background Hover Effect */
+nav ul li a:not(.join)::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff7f50, #ff5722);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/* Text Color and Background Expand on Hover */
+nav ul li a:not(.join):hover::before {
+    transform: scaleX(1);
+}
+
+nav ul li a:not(.join):hover {
+    color: #ff7f50;
+}
+
+/* Active Page Highlight */
+nav ul li a.active {
+    background: linear-gradient(to right, #ff7f50, #ff5722);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/* Special Style for "Join" Button */
+nav ul li a.join {
+    background: #fbb040;
+    padding: 10px 20px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+/* "Join" Button Hover Effect */
+nav ul li a.join:hover {
+    background: #ff7f50;
+    transform: scale(1.1);
+}
+		.logo {
+			display: flex;
+			align-items: center;
+		}
+		
+		.logo span{
+					font-weight:bold;
+					color:black;
+					}
+		
+		.logo img {
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
+		}
+		
+		/* Navigation Bar */
+		nav ul {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			padding: 0;
+		}
+		
+		nav ul li {
+			display: inline-block;
+			position: relative;
+		}
+		
+		/* General Style for Navigation Links */
+		nav ul li a {
+			text-decoration: none;
+			color: #333;
+			font-size: 18px;
+			padding: 10px 15px;
+			font-weight: bold;
+			border-radius: 5px;
+			transition: all 0.3s ease-in-out;
+			position: relative;
+			overflow: hidden;
+		}
+
+
+
+.profile {
+			position: absolute;
+			top:200px;
+			left:50px;
+			width:500px;
+			height:600px;
+			border: 2px solid purple;
+			box-shadow: 0px 0px 25px purple;
+			border-radius: 20px;
+			
+	
+		}
+
+.profile img {
+				position: relative;
+				top: 2rem;
+				left: 8rem;
+				width: 100%;
+				max-width: 250px;
+				height: auto;
+				aspect-ratio: 1 /1;
+				border-radius: 50%;
+				object-fit: cover;
+				object-position: center 0px;
+				margin-bottom: 1rem;
+			}
+
+.profile img {
+				animation:float 5s ease-in-out infinite;
+                filter: drop-shadow(10px 10px 10px rgba(112, 41, 99, 0.8));
+				}		
+				  
+@media screen and (min-width: 992px){
+    
+										@keyframes float{
+											0%{transform:translatey(0px);}
+											50%{transform:translatey(-20px);}
+											100%{transform:translatey(0px);}
+											
+										}
+
+.profile p {
+				position: relative;
+				top: 0.10rem;
+				right: 32rem;
+				margin-bottom: 2rem;
+			}
+
+.profile h2,h3{
+				
+				color:#38B6FF;
+					
+				}
+
+.student , .intro{
+				
+					color:#38B6FF;
+					text-align:center;
+					}
+
+
+
+.tasks h3 {
+			text-align:center;
+			color:#38B6FF;
+			font-size:20px;
+			}
+
+.profile .intro {
+					font-size: 2.3rem;
+					font-weight: 600;
+				}
+
+.profile a {
+				position: relative;
+				top: 0rem;
+				left: 28rem;
+				text-decoration: none;
+				color: white;
+				background-color: #38B6FF;
+				padding: 0.5rem;
+				border-radius: 30%;
+			}
+
+#name {
+			color: #38B6FF;
+			text-shadow: 0 0 30px #38B6FF;
+		}
+
+.profile .student {
+						font-size: 2rem;
+						font-weight: 600;
+					}
+
+#student-role {
+					color: #088395;
+				}
+
+.profile .description {
+							font-size: 1.3rem;
+							font-weight: 600;
+							color:#38B6FF;
+						}
+
+/* Styling the tasks */
+
+.tasks {
+			position: relative;
+			width: 48vw;
+			margin-right: 2rem;
+			margin-left: 45vw;
+			top: 1rem;
+			padding-left: 4rem;
+		}
+
+.tasks::after {
+					
+					position: absolute;
+					background: white;
+					width: 5px;
+					height: 93%;
+					border-radius: 2px;
+					top: 0;
+					left: 0;
+				}
+
+.task-card {
+				position: relative;
+				border: 1px solid white;
+				border-radius: 10px;
+				margin-bottom: 30px;
+				padding:2px;
+			}
+			
+.task-card h3{
+				padding-top:10px;
+				}
+
+
+
+
+.task-card .main-topic::before {
+									
+									background-color: white;
+									width: 15px;
+									height: 15px;
+									border-radius: 50%;
+									position: absolute;
+									top: -2.2rem;
+									left: -2.8rem;
+								}
+
+
+
+
+.main-topic {
+				position: relative;
+				font-size: 2rem;
+				color: #BF40BF;
+			}
+
+.sub-topic {
+				color: #088395;
+			}
+
+.link1 {
+		margin-right: auto;
+		text-align: right;
+		padding-right: 1rem;
+		margin-bottom:5px;
+		
+	}
+	
+.link2 {
+		margin-right: auto;
+		text-align: left;
+		padding-right: 1rem;
+		padding-bottom:10px;
+		
+	}	
+
+.link1  a {
+			color: #38B6FF;
+			}
+
+.link2  a {
+			color: #38B6FF;
+			}
+
+.ref li {
+			padding:20px;
+		}
+		
+.top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+        
+.top a {
+    padding: 10px 20px; /* Adds padding for button-like feel */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 20px; /* Rounds the corners */
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold; /* Make the text stand out */
+}
+
+.top a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+	
+}
